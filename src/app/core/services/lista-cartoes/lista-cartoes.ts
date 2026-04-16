@@ -5,7 +5,7 @@ import { Cartao } from '../../models/cartao.model';
 @Injectable()
 export class ListaCartoes {
 
-  private url_api: string = 'http://localhost:3000/cartoes';
+  private url_api: string = 'http://localhost:3001/cartoes';
   private readonly http = inject(HttpClient);
 
   getlistaCartoes() {
