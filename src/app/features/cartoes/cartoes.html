@@ -1,0 +1,18 @@
+<section class="lista-cartoes">
+  <h1>Cartões disponíveis</h1>
+
+  <app-loading *ngIf="loading()" message="Carregando cartões..."></app-loading>
+
+  <ng-container *ngIf="!loading()">
+    <ng-container *ngIf="cartoes().length > 0; else emptyState">
+      <app-card-cartao
+        *ngFor="let cartao of cartoes()"
+        [cartaoData]="cartao"
+      ></app-card-cartao>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #emptyState>
+    <p>Nenhum cartão disponível.</p>
+  </ng-template>
+</section>

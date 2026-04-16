@@ -1,15 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: AppComponent,
-  },
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +10,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    AppRoutingModule,
   ],
   providers: []
 })

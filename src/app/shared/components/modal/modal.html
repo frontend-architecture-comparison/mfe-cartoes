@@ -1,0 +1,13 @@
+<div *ngIf="open" class="overlay" (click)="onOverlayClick()" aria-hidden="true">
+  <section
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="title"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+  </section>
+</div>
