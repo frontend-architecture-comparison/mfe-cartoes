@@ -2,10 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Cartao } from '../../models/cartao.model';
 
+const URL_API = 'http://localhost:3001';
+
 @Injectable()
 export class ListaCartoes {
-
-  private url_api: string = 'http://localhost:3001/cartoes';
+  private url_api: string = `${URL_API}/cartoes`;
   private readonly http = inject(HttpClient);
 
   getlistaCartoes() {
