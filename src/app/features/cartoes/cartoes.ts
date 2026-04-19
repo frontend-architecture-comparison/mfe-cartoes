@@ -24,6 +24,10 @@ export class Cartoes implements OnInit {
   }
 
   ngOnInit(): void {
+    this.listaCartoes();
+  }
+
+  listaCartoes(): void {
     this.cartoesService.getlistaCartoes().subscribe({
       next: (cartoes) => {
         this.cartoesValue = cartoes;
