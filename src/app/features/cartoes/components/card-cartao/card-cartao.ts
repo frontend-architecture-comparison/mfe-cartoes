@@ -26,20 +26,11 @@ export class CardCartao {
     this.router.navigate(['/carrinho', this.cartaoValue.id]);
   }
 
-  abrirModal(): void {
-    this.modalAberto = true;
-  }
-
-  fecharModal(): void {
-    this.modalAberto = false;
-  }
-
   selectCartao(): void {
     this.irParaCarrinho();
   }
 
   irParaCarrinho(): void {
-    this.fecharModal();
     this.router.navigate(['/carrinho', this.cartaoValue.id]);
   }
 }
