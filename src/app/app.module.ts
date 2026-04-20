@@ -1,15 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { CommonModule, registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: AppComponent,
-  },
-];
+registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   declarations: [
@@ -17,8 +13,10 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    AppRoutingModule,
   ],
-  providers: []
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
+  ]
 })
 export class AppModule { }
