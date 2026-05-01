@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Cartao } from '../../models/cartao.model';
 
-const URL_API = 'http://localhost:3001';
+const URL_API = 'http://localhost:3000';
 
 @Injectable()
 export class ListaCartoes {

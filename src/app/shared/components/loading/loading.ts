@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+// TODO: ver este template fixo
 @Component({
     selector: 'app-loading',
     template: `
